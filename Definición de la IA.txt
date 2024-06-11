@@ -1,0 +1,8 @@
+Definición de la IA
+
+La inteligencia artificial (IA) es una rama de la informática dedicada a la creación de sistemas capaces de realizar tareas que, en circunstancias normales, requieren de la inteligencia humana. Estas tareas incluyen el reconocimiento de voz, la toma de decisiones, la comprensión del lenguaje natural, el aprendizaje, la planificación y la resolución de problemas. A través de la IA, las máquinas pueden ser programadas para imitar y realizar funciones cognitivas humanas, brindando una amplia gama de aplicaciones prácticas en diversos campos.
+
+El concepto de inteligencia artificial no es nuevo; sus raíces se remontan a la antigüedad, cuando los filósofos griegos soñaban con autómatas inteligentes. Sin embargo, la IA moderna comenzó a tomar forma en el siglo XX. En 1956, durante la Conferencia de Dartmouth, el término "inteligencia artificial" fue acuñado por John McCarthy, marcando el inicio formal del campo. Desde entonces, la IA ha evolucionado significativamente, impulsada por avances en matemáticas, informática, neurociencia y psicología.
+
+
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de Navbar</title>
+    <style>
+        /* Estilos para el navbar */
+        body {
+            background-color: #f2f2f2;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+           /* Estilo para el footer */
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+        nav {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f2f2f2;
+            transition: background-color 0.3s;
+        }
+
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            padding: 5px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        nav a.active {
+            font-weight: bold;
+        }
+
+        .idioma {
+            position: relative;
+        }
+
+        .idioma-opciones {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .idioma-opciones a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            padding: 5px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .idioma-opciones a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .idioma-opciones a img {
+            width: 20px;
+            height: 15px;
+            margin-right: 5px;
+        }
+
+        .tema-oscuro {
+            background-color: #333;
+            color: #f2f2f2;
+        }
+
+        .tema-oscuro nav {
+            background-color: #333;
+        }
+
+        .tema-oscuro nav a {
+            color: #f2f2f2;
+        }
+
+        .tema-oscuro .idioma-opciones a {
+            color: #f2f2f2;
+        }
+    </style>
+    <script>
+        // Lógica para mostrar/ocultar el contenido de cada página
+        function mostrarPagina(pagina) {
+            var paginas = document.getElementsByClassName('pagina');
+            for (var i = 0; i < paginas.length; i++) {
+                paginas[i].style.display = 'none';
+            }
+            document.getElementById(pagina).style.display = 'block';
+        }
+
+        // Lógica para cambiar el idioma de la página
+        function cambiarIdioma(idioma) {
+            var elementosTraducibles = document.querySelectorAll('[data-es], [data-en], [data-ko]');
+            for (var i = 0; i < elementosTraducibles.length; i++) {
+                var elemento = elementosTraducibles[i];
+                if (idioma === 'es') {
+                    elemento.innerText = elemento.getAttribute('data-es');
+                } else if (idioma === 'en') {
+                    elemento.innerText = elemento.getAttribute('data-en');
+                } else if (idioma === 'ko') {
+                    elemento.innerText = elemento.getAttribute('data-ko');
+                }
+            }
+        }
+
+        // Lógica para cambiar el tema de la página (modo claro/oscuro)
+        function cambiarTema() {
+            var body = document.getElementsByTagName('body')[0];
+            var navbar = document.getElementsByTagName('nav')[0];
+            var opcionesIdioma = document.getElementById('idioma-opciones');
+            if (body.classList.contains('tema-oscuro')) {
+                body.classList.remove('tema-oscuro');
+                navbar.classList.remove('tema-oscuro');
+                opcionesIdioma.classList.remove('tema-oscuro');
+            } else {
+                body.classList.add('tema-oscuro');
+                navbar.classList.add('tema-oscuro');
+                opcionesIdioma.classList.add('tema-oscuro');
+            }
+        }
+
+        // Mostrar/ocultar las opciones de idioma
+        function toggleIdiomaOpciones() {
+            var opciones = document.getElementById('idioma-opciones');
+            if (opciones.style.display === 'block') {
+                opciones.style.display = 'none';
+            } else {
+                opciones.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#" class="active" onclick="mostrarPagina('inicio')">Inicio</a>
+        <a href="#" onclick="mostrarPagina('acerca')">Acerca de</a>
+        <a href="#" onclick="mostrarPagina('tutoriales')">Tutoriales</a>
+        <a href="#" onclick="mostrarPagina('servicios')">Servicios</a>
+        <div class="idioma">
+            <a href="#" onclick="toggleIdiomaOpciones()">Idioma</a>
+            <div id="idioma-opciones" class="idioma-opciones">
+                <a href="#" onclick="cambiarIdioma('es')">Español</a>
+                <a href="#" onclick="cambiarIdioma('en')">English</a>
+                <a href="#" onclick="cambiarIdioma('ko')">한국어</a>
+            </div>
+        </div>
+        <a href="#" onclick="cambiarTema()">Cambiar Tema</a>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div id="inicio" class="pagina" style="display: block;">
+        <h1 class="traducible" data-es="Página de Inicio" data-en="Home Page" data-ko="홈페이지">Página de Inicio</h1>
+        <p class="traducible" data-es="Bienvenido a nuestra página de inicio." data-en="Welcome to our home page." data-ko="우리의 홈페이지에 오신 것을 환영합니다.">Bienvenido a nuestra página de inicio.</p>
+    </div>
+    <div id="acerca" class="pagina">
+        <h1 class="traducible" data-es="Acerca de" data-en="About" data-ko="정보">Acerca de</h1>
+        <p class="traducible" data-es="Esta es una página de información." data-en="This is an information page." data-ko="이것은 정보 페이지입니다.">Esta es una página de información.</p>
+    </div>
+    <div id="tutoriales" class="pagina">
+        <h1 class="traducible" data-es="Tutoriales" data-en="Tutorials" data-ko="자습서">Tutoriales</h1>
+        <p class="traducible" data-es="Aquí encontrarás tutoriales útiles." data-en="Here you will find helpful tutorials." data-ko="여기서 유용한 자습서를 찾을 수 있습니다.">Aquí encontrarás tutoriales útiles.</p>
+    </div>
+    <div id="servicios" class="pagina">
+        <h1 class="traducible" data-es="Servicios" data-en="Services" data-ko="서비스">Servicios</h1>
+        <p class="traducible" data-es="Ofrecemos una variedad de servicios." data-en="We offer a variety of services." data-ko="다양한 서비스를 제공합니다.">Ofrecemos una variedad de servicios.</p>
+    </div>
+
+    <footer>
+        <p>Copyright: <span>© <script>document.write(new Date().getFullYear())</script></span> | v0.4 |</p>
+    </footer>
+
+    <script>
+        // Mostrar la página de inicio al cargar la página
+        mostrarPagina('inicio');
+    </script>
+     <script
+     src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js"
+     data-project-url="https://www.stack-ai.com/embed/4c01665a-86e1-4092-a602-57b9cc9d0d0a/849818b3-deac-4dff-8afa-2e0c7d0c0c54/6662745bde3c3fa0075290fd">
+   </script>
+</body>
+</html>

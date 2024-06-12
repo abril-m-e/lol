@@ -355,7 +355,7 @@
         if (user) {
           const decryptedPassword = await decrypt(user.password.encrypted, user.password.key, user.password.iv);
           if (password === decryptedPassword) {
-            window.location.href = 'LOL.html'; // Redireccionar al usuario a la página de inicio después de iniciar sesión
+            window.location.href = 'test.html'; // Redireccionar al usuario a la página de inicio después de iniciar sesión
           } else {
             alert('Contraseña incorrecta');
           }

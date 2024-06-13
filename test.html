@@ -5,18 +5,18 @@
     <title>Ejemplo de Navbar</title>
     <style>
         body {
-            background-color: #001f3f; 
+            background-color: #001f3f;
             color: #f2f2f2;
             font-family: 'Arial', sans-serif;
-            text-align: center; 
+            text-align: center;
             transition: background-color 0.3s, color 0.3s;
         }
 
         nav {
             padding: 20px;
             display: flex;
-            justify-content: center; 
-            background-color: #1f77b4; 
+            justify-content: center;
+            background-color: #1f77b4;
             transition: background-color 0.3s;
         }
 
@@ -30,13 +30,13 @@
         }
 
         nav a:hover {
-            background-color: #39CCCC; 
+            background-color: #39CCCC;
             color: #001f3f;
             border-radius: 5px;
         }
 
         nav a.active {
-            background-color: #0074D9; 
+            background-color: #0074D9;
             color: #ffffff;
         }
 
@@ -50,16 +50,22 @@
             width: 100%;
         }
 
-        h1, h2 {
-            color: #39CCCC; 
+        h1,
+        h2 {
+            color: #39CCCC;
         }
 
-        p, ul, li, pre {
-            color: #7FDBFF; 
+        p,
+        ul,
+        li,
+        pre {
+            color: #7FDBFF;
         }
 
         .pagina {
             margin: 20px;
+            text-align: left;
+            /* Cambiar alineación de texto */
         }
 
         .tema-oscuro {
@@ -73,6 +79,23 @@
 
         .tema-oscuro nav a {
             color: #f2f2f2;
+        }
+
+        .articulo {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .articulo img {
+            margin: 20px;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .articulo div {
+            flex: 1;
+            padding: 20px;
         }
     </style>
     <script>
@@ -109,29 +132,33 @@
             <h1>La Inteligencia Artificial</h1>
             <pre>Maestra, ponganos 10 (la queremos mucho)</pre>
         </header>
-        <section id="introduccion">
-            <h2>Introducción</h2>
-            <p>La inteligencia artificial (IA) es una disciplina informática que busca desarrollar sistemas capaces de
-                ejecutar tareas que normalmente requieren inteligencia humana. Esto incluye reconocimiento de voz, toma
-                de decisiones, procesamiento del lenguaje natural, entre otros. Surgió formalmente en la década de 1950,
-                y desde entonces ha evolucionado gracias a avances en diversas áreas como matemáticas y neurociencia.
+        <section id="introduccion" class="articulo">
+            <img src="https://www.repsol.com/content/dam/repsol-corporate/es/energia-e-innovacion/inteligencia-artificial-IA.jpg.transform/rp-rendition-md/image.jpg"
+                alt="Inteligencia Artificial">
+            <div>
+                <h2>Introducción</h2>
+                <h2>Introducción</h2>
+                <p>La inteligencia artificial (IA) es una disciplina informática que busca desarrollar sistemas capaces
+                    de ejecutar tareas que normalmente requieren inteligencia humana. Esto incluye reconocimiento de
+                    voz, toma de decisiones, procesamiento del lenguaje natural, entre otros. Surgió formalmente en la
+                    década de 1950, y desde entonces ha evolucionado gracias a avances en diversas áreas como
+                    matemáticas y neurociencia.
 
-                Sus componentes fundamentales incluyen algoritmos de aprendizaje automático, redes neuronales
-                artificiales, procesamiento del lenguaje natural y robótica. La IA tiene numerosas aplicaciones
-                prácticas, como asistentes virtuales, vehículos autónomos y diagnóstico médico.
+                    Sus componentes fundamentales incluyen algoritmos de aprendizaje automático, redes neuronales
+                    artificiales, procesamiento del lenguaje natural y robótica. La IA tiene numerosas aplicaciones
+                    prácticas, como asistentes virtuales, vehículos autónomos y diagnóstico médico.
 
-                Sin embargo, también plantea desafíos importantes, como la privacidad, la seguridad y la ética. La
-                automatización laboral y las preocupaciones sobre la equidad y transparencia en los algoritmos son áreas
-                de debate en este campo.</p>
+                    Sin embargo, también plantea desafíos importantes, como la privacidad, la seguridad y la ética. La
+                    automatización laboral y las preocupaciones sobre la equidad y transparencia en los algoritmos son
+                    áreas de debate en este campo.</p>
+            </div>
         </section>
-        <br>
-        <center><img
-                src=https://www.repsol.com/content/dam/repsol-corporate/es/energia-e-innovacion/inteligencia-artificial-IA.jpg.transform/rp-rendition-md/image.jpg
-                Height="200" width=450></center>
-        <br>
-        <section id="aplicaciones">
-            <h2>Aplicaciones de la IA en la Vida Diaria</h2>
-            <ul>
+        <section id="aplicaciones" class="articulo">
+            <img src="https://media.gq.com.mx/photos/608f2b95c9a95f9c2fd01832/16:9/w_2560%2Cc_limit/AI%2520cerebro.jpg"
+                alt="Aplicaciones IA">
+            <div>
+                <h2>Aplicaciones de la IA en la Vida Diaria</h2>
+                    <ul>
                 <li><strong>Asistentes Virtuales:</strong>Uno de los usos más visibles de la IA en la vida diaria es a
                     través de
                     los asistentes virtuales como Siri, Alexa y Google Assistant. Estos sistemas utilizan el
@@ -200,13 +227,14 @@
                     las necesidades de los residentes y ajustar sus funciones automáticamente, creando un entorno de
                     vida más intuitivo
                     y cómodo.</li>
-            </ul>
+                </ul>
+            </div>
         </section>
-        <center><img
-            src=https://media.gq.com.mx/photos/608f2b95c9a95f9c2fd01832/16:9/w_2560%2Cc_limit/AI%2520cerebro.jpg
-            Height="200" width=450></center>
-        <section id="beneficios">
-            <h2>Beneficios de la IA</h2>
+        <section id="beneficios" class="articulo">
+            <img src="https://i0.wp.com/litci.org/es/wp-content/uploads/2023/07/Imagen-humanoide-de-robots-con-tablet-para-estudiar-ciencias-la-ingenieria-robot-ciencia-usando-inteligencia-artificial-del-cerebro-209947668.webp"
+                alt="Beneficios IA">
+            <div>
+               <h2>Beneficios de la IA</h2>
             <p>La inteligencia artificial ofrece una amplia gama de beneficios que están transformando la manera en que
                 vivimos y trabajamos. Su capacidad para mejorar la eficiencia y la productividad, proporcionar análisis
                 de
@@ -217,7 +245,7 @@
                 la IA se distribuyan equitativamente y contribuyan a un futuro más inclusivo y eficiente para todos.
             </p>
             <br>
-            <lu>
+            <ul>
                 <li><strong>Eficiencia y Productividad:</strong>La IA mejora la eficiencia y productividad en diversas
                     actividades. Las máquinas y algoritmos de IA pueden realizar tareas repetitivas con rapidez y
                     precisión, liberando a los humanos para enfocarse en actividades creativas y estratégicas. En la
@@ -239,15 +267,14 @@
                     personas con discapacidades visuales o auditivas. En educación, la IA personaliza el aprendizaje
                     según las necesidades y estilos de cada estudiante, beneficiando especialmente a aquellos con
                     discapacidades de aprendizaje.</li>
-            </lu>
+                </ul>
+            </div>
         </section>
-        <br>
-        <center><img
-            src=https://i0.wp.com/litci.org/es/wp-content/uploads/2023/07/Imagen-humanoide-de-robots-con-tablet-para-estudiar-ciencias-la-ingenieria-robot-ciencia-usando-inteligencia-artificial-del-cerebro-209947668.webp
-            Height="200" width=450></center>
-            <br>
-        <section id="desafios">
-            <h2>Desafíos y Riesgos</h2>
+        <section id="desafios" class="articulo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70QBo3BCCq3asaZfJ_bVPekxVmBYirIhpkQ&s"
+                alt="Desafíos IA">
+            <div>
+                <h2>Desafíos y Riesgos</h2>
             <p>Desafíos y Riesgos de la Inteligencia Artificial
                 La inteligencia artificial (IA) es una tecnología que promete revolucionar numerosos aspectos de nuestra
                 vida,
@@ -318,14 +345,13 @@
                 </li>
 
             </ul>
+            </div>
         </section>
-        <br>
-        <center><img
-            src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70QBo3BCCq3asaZfJ_bVPekxVmBYirIhpkQ&s
-            Height="200" width=450></center>
-            <br>
-        <section id="futuro">
-            <h2>Futuro de la IA</h2>
+        <section id="futuro" class="articulo">
+            <img src="https://es.fi-group.com/wp-content/uploads/sites/4/2023/03/inteligencia-artificial-chatgpt-1-scaled.jpg"
+                alt="Futuro IA">
+            <div>
+                <h2>Futuro de la IA</h2>
             <p>La inteligencia artificial (IA) está en una trayectoria ascendente, y su potencial para
                 transformar nuestra sociedad es inmenso. A medida que la tecnología avanza, es esencial considerar no
                 solo los avances técnicos que podemos esperar, sino también el impacto social y la necesidad de una
@@ -353,32 +379,24 @@
                     trabajar juntos para establecer estándares y directrices que promuevan la transparencia y la
                     responsabilidad en el desarrollo y la implementación de la IA.</li>
             </ul>
+            </div>
         </section>
-        <br>
-        <center><img
-            src=https://es.fi-group.com/wp-content/uploads/sites/4/2023/03/inteligencia-artificial-chatgpt-1-scaled.jpg
-            Height="200" width=1000></center>
-            <br>
-        <section id="conclusion">
-            <h2>Conclusión</h2>
-            <p>La inteligencia artificial se ha convertido en una fuerza transformadora en la sociedad moderna,
-                ofreciendo innumerables beneficios a través de mejoras en la eficiencia,
-                la productividad y la toma de decisiones en diversas industrias. Sin embargo,
-                su rápido desarrollo también presenta desafíos significativos, como la privacidad,
-                la seguridad, el desempleo y cuestiones éticas. Es crucial abordar estos desafíos con una
-                regulación adecuada y un enfoque ético robusto para garantizar que la IA se desarrolle y se
-                utilice de manera responsable. Con un equilibrio adecuado entre innovación y precaución, la
-                IA tiene el potencial de mejorar significativamente la calidad de vida y fomentar un futuro más
-                equitativo y sostenible
-                para todos.</p>
+        <section id="conclusion" class="articulo">
+            <img src="https://i.pinimg.com/564x/59/65/44/5965441e7df742f352141a3ee7118e75.jpg" alt="Conclusión IA">
+            <div>
+                <h2>Conclusión</h2>
+                <p>La inteligencia artificial se ha convertido en una fuerza transformadora en la sociedad moderna,
+                    ofreciendo innumerables beneficios a través de mejoras en la eficiencia,
+                    la productividad y la toma de decisiones en diversas industrias. Sin embargo,
+                    su rápido desarrollo también presenta desafíos significativos, como la privacidad,
+                    la seguridad, el desempleo y cuestiones éticas. Es crucial abordar estos desafíos con una
+                    regulación adecuada y un enfoque ético robusto para garantizar que la IA se desarrolle y se
+                    utilice de manera responsable. Con un equilibrio adecuado entre innovación y precaución, la
+                    IA tiene el potencial de mejorar significativamente la calidad de vida y fomentar un futuro más
+                    equitativo y sostenible
+                    para todos.</p>
+            </div>
         </section>
-        <br>
-        <center><img
-            src=https://i.pinimg.com/564x/59/65/44/5965441e7df742f352141a3ee7118e75.jpg
-            Height="150" width=1000></center>
-            <br>
-        <br>
-        <br>
         <footer>
             <p>Copyright: <span>©
                     <script>document.write(new Date().getFullYear())</script>
@@ -414,7 +432,6 @@
     </div>
 
     <script>
-        // Mostrar la página de inicio al cargar la página
         mostrarPagina('inicio');
     </script>
 
